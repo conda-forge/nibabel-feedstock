@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/nibabel-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/nibabel-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/nibabel-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/nibabel-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/nibabel-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/nibabel-feedstock/branch/master)
