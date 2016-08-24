@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: nibabel
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: nibabel-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/source/n/nibabel/nibabel-{{ version }}.tar.gz
-  md5: fa89163149e35f52e237b2cb56b1c606
+  url: https://github.com/nipy/nibabel/archive/{{ version }}.tar.gz
+  md5: f6e213894939aece4619e3a45259dfbd
 
 build:
     number: 0
