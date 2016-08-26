@@ -1,13 +1,21 @@
-{% set version = "2.0.2" %}
+# Jinja variables help maintain the recipe as you'll update the version only here.
+{% set name = "nibabel" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "cb745509484ff5270a5a0bcf1f0693f32e4db0cd0171cedf82728376b12f4ac9" %}
+
+# sha256 is the prefered checksum -- you can get it for a file with:
+#  `openssl sha256 <file name>`.
+# You may need the openssl package, available on conda-forge
+#  `conda install openssl -c conda-forge``
 
 package:
-  name: nibabel
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: nibabel-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/source/n/nibabel/nibabel-{{ version }}.tar.gz
-  md5: fa89163149e35f52e237b2cb56b1c606
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/nipy/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
     number: 0
