@@ -14,14 +14,16 @@ Summary: Python package to access a cacophony of neuro-imaging file formats
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/nibabel-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/nibabel-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/nibabel-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/nibabel-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/nibabel-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/nibabel-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/nibabel-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/nibabel-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/nibabel-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/nibabel-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/nibabel-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/nibabel-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/nibabel/badges/version.svg)](https://anaconda.org/conda-forge/nibabel)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/nibabel/badges/downloads.svg)](https://anaconda.org/conda-forge/nibabel)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-nibabel-green.svg)](https://anaconda.org/conda-forge/nibabel) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/nibabel.svg)](https://anaconda.org/conda-forge/nibabel) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/nibabel.svg)](https://anaconda.org/conda-forge/nibabel) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/nibabel.svg)](https://anaconda.org/conda-forge/nibabel) |
 
 Installing nibabel
 ==================
