@@ -18,8 +18,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-    noarch: python
-    number: 0
+    number: 1
     script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -35,6 +34,7 @@ requirements:
     - scipy
     - h5py
     - pydicom
+    - bz2file [py27]
 
 test:
   imports:
