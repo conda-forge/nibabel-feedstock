@@ -34,7 +34,7 @@ requirements:
     - scipy
     - h5py
     - pydicom
-    - bz2file [py27]
+    - bz2file  # [py27]
 
 test:
   imports:
