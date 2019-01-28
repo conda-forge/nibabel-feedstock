@@ -18,8 +18,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-    noarch: python
-    number: 0
+    number: 1
     script: "{{ PYTHON }} -m pip install . -vv"
     entry_points:
       - parrec2nii   = nibabel.cmdline.parrec2nii:main
@@ -41,7 +40,7 @@ requirements:
     - h5py
     - pydicom
     - six
-    - bz2file
+    - bz2file  # [py27]
 
 test:
   imports:
