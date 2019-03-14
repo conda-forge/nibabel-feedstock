@@ -47,13 +47,13 @@ test:
   imports:
     - nibabel
   commands:
-    - command -v parrec2nii
-    - command -v nib-ls
-    - command -v nib-dicomfs
-    - command -v nib-nifti-dx
-    - command -v nib-tck2trk
-    - command -v nib-trk2tck
-    - command -v nib-diff
+    - parrec2nii --help
+    - nib-ls --help
+    - nib-dicomfs --help
+    - nib-nifti-dx --help
+    - nib-tck2trk --help
+    - nib-trk2tck --help
+    - nib-diff --help
 
 
 about:
