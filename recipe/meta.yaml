@@ -40,8 +40,6 @@ requirements:
     - scipy
     - h5py
     - pydicom
-    - six
-    - bz2file
 
 test:
   imports:
