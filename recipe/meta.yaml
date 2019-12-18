@@ -32,14 +32,14 @@ build:
 
 requirements:
   host:
+    - python >=3.5.1
     - pip
-    - python
   run:
-    - python
-    - numpy
+    - python >=3.5.1
+    - numpy >=1.12
     - scipy
     - h5py
-    - pydicom
+    - pydicom >=0.9.9
 
 test:
   imports:
