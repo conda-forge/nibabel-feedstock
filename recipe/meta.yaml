@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "nibabel" %}
-{% set version = "3.0.1" %}
-{% set sha256 = "6e75b1560a53d0d7ebf04946ac37934fabd5adc76d328f1dadd5429f9c622fc9" %}
+{% set version = "3.0.2" %}
+{% set sha256 = "f355ebbda4069f010fae701030a577338ffa4edeff339fa9986928e07e986fc9" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -18,17 +18,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-    noarch: python
-    number: 0
-    script: "{{ PYTHON }} -m pip install . -vv"
-    entry_points:
-      - parrec2nii   = nibabel.cmdline.parrec2nii:main
-      - nib-ls       = nibabel.cmdline.ls:main
-      - nib-dicomfs  = nibabel.cmdline.dicomfs:main
-      - nib-nifti-dx = nibabel.cmdline.nifti_dx:main
-      - nib-tck2trk  = nibabel.cmdline.tck2trk:main
-      - nib-trk2tck  = nibabel.cmdline.trk2tck:main
-      - nib-diff     = nibabel.cmdline.diff:main
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - parrec2nii   = nibabel.cmdline.parrec2nii:main
+    - nib-ls       = nibabel.cmdline.ls:main
+    - nib-dicomfs  = nibabel.cmdline.dicomfs:main
+    - nib-nifti-dx = nibabel.cmdline.nifti_dx:main
+    - nib-tck2trk  = nibabel.cmdline.tck2trk:main
+    - nib-trk2tck  = nibabel.cmdline.trk2tck:main
+    - nib-diff     = nibabel.cmdline.diff:main
 
 requirements:
   host:
