@@ -36,7 +36,8 @@ requirements:
     - pip
   run:
     - python >=3.5.1
-    - numpy >=1.12
+    - packaging >=14.3
+    - numpy >=1.13
     - scipy
     - h5py
     - pydicom >=0.9.9
