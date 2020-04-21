@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "nibabel" %}
-{% set version = "3.0.2" %}
-{% set sha256 = "f355ebbda4069f010fae701030a577338ffa4edeff339fa9986928e07e986fc9" %}
+{% set version = "3.1.0" %}
+{% set sha256 = "855e0f0795282c0d32ffc25e5d4e1b4b2c7b84d8e385f8959efdc640ea909947" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -29,13 +29,14 @@ build:
     - nib-tck2trk  = nibabel.cmdline.tck2trk:main
     - nib-trk2tck  = nibabel.cmdline.trk2tck:main
     - nib-diff     = nibabel.cmdline.diff:main
+    - nib-conform  = nibabel.cmdline.conform:main
 
 requirements:
   host:
-    - python >=3.5.1
+    - python >=3.6
     - pip
   run:
-    - python >=3.5.1
+    - python >=3.6
     - packaging >=14.3
     - numpy >=1.13
     - scipy
@@ -53,6 +54,7 @@ test:
     - nib-tck2trk --help
     - nib-trk2tck --help
     - nib-diff --help
+    - nib-conform --help
 
 
 about:
