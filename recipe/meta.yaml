@@ -29,13 +29,14 @@ build:
     - nib-tck2trk  = nibabel.cmdline.tck2trk:main
     - nib-trk2tck  = nibabel.cmdline.trk2tck:main
     - nib-diff     = nibabel.cmdline.diff:main
+    - nib-conform  = nibabel.cmdline.conform:main
 
 requirements:
   host:
-    - python >=3.5.1
+    - python >=3.6
     - pip
   run:
-    - python >=3.5.1
+    - python >=3.6
     - packaging >=14.3
     - numpy >=1.13
     - scipy
@@ -53,6 +54,7 @@ test:
     - nib-tck2trk --help
     - nib-trk2tck --help
     - nib-diff --help
+    - nib-conform --help
 
 
 about:
