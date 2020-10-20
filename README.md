@@ -5,11 +5,9 @@ Home: https://nipy.org/nibabel
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nibabel-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python package to access a cacophony of neuro-imaging file formats
-
-
 
 Current build status
 ====================
