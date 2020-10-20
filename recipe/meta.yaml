@@ -30,6 +30,8 @@ build:
     - nib-trk2tck  = nibabel.cmdline.trk2tck:main
     - nib-diff     = nibabel.cmdline.diff:main
     - nib-conform  = nibabel.cmdline.conform:main
+    - nib-roi      = nibabel.cmdline.roi:main
+    - nib-stats    = nibabel.cmdline.stats:main
 
 requirements:
   host:
@@ -38,7 +40,7 @@ requirements:
   run:
     - python >=3.6
     - packaging >=14.3
-    - numpy >=1.13
+    - numpy >=1.14
     - scipy
     - h5py
     - pydicom >=0.9.9
@@ -55,6 +57,8 @@ test:
     - nib-trk2tck --help
     - nib-diff --help
     - nib-conform --help
+    - nib-roi --help
+    - nib-stats --help
 
 
 about:
