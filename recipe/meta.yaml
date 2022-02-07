@@ -43,7 +43,7 @@ requirements:
     - numpy >=1.14
     - scipy
     - h5py
-    - pydicom >=0.9.9
+    - pydicom >=1.0.0
 
 test:
   imports:
