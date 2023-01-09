@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "nibabel" %}
-{% set version = "4.0.2" %}
-{% set sha256 = "6b06c0e9ad128d9917df1c97e6591c7dce80246c620f7ba8b29e689e07539b78" %}
+{% set version = "5.0.0" %}
+{% set sha256 = "763f075bca72b17fbde792d028ee7624de0d70fb1fab442dae810570badf2595" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -35,15 +35,16 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
+    - hatchling
+    - hatch-vcs
+    - setuptools_scm
   run:
-    - python >=3.6
-    - packaging >=14.3
-    - numpy >=1.14
-    - scipy
-    - h5py
-    - pydicom >=1.0.0
+    - python >=3.8
+    - packaging >=17
+    - numpy >=1.19
+    - setuptools
 
 test:
   imports:
