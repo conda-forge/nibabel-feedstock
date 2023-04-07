@@ -18,7 +18,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - nib-conform  = nibabel.cmdline.conform:main
