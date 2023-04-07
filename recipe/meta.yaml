@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "nibabel" %}
-{% set version = "5.0.1" %}
-{% set sha256 = "b4878399726a34176400c3afa28d0532177ce85a56f39438a8cb09379ca8a4ef" %}
+{% set version = "5.1.0" %}
+{% set sha256 = "ed91148a46ca6ab9bc05796248e07691c094fe2fc066d10a00299787396c1a9f" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -18,48 +18,49 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - parrec2nii   = nibabel.cmdline.parrec2nii:main
-    - nib-ls       = nibabel.cmdline.ls:main
-    - nib-dicomfs  = nibabel.cmdline.dicomfs:main
-    - nib-nifti-dx = nibabel.cmdline.nifti_dx:main
-    - nib-tck2trk  = nibabel.cmdline.tck2trk:main
-    - nib-trk2tck  = nibabel.cmdline.trk2tck:main
-    - nib-diff     = nibabel.cmdline.diff:main
     - nib-conform  = nibabel.cmdline.conform:main
+    - nib-convert  = nibabel.cmdline.convert:main
+    - nib-dicomfs  = nibabel.cmdline.dicomfs:main
+    - nib-diff     = nibabel.cmdline.diff:main
+    - nib-ls       = nibabel.cmdline.ls:main
+    - nib-nifti-dx = nibabel.cmdline.nifti_dx:main
     - nib-roi      = nibabel.cmdline.roi:main
     - nib-stats    = nibabel.cmdline.stats:main
+    - nib-tck2trk  = nibabel.cmdline.tck2trk:main
+    - nib-trk2tck  = nibabel.cmdline.trk2tck:main
+    - parrec2nii   = nibabel.cmdline.parrec2nii:main
 
 requirements:
   host:
-    - python >=3.8
+    - python
     - pip
     - hatchling
     - hatch-vcs
     - setuptools_scm
   run:
-    - python >=3.8
+    - python
     - packaging >=17
     - numpy >=1.19
-    - setuptools
+    - importlib_resources  # [py<39]
 
 test:
   imports:
     - nibabel
   commands:
-    - parrec2nii --help
-    - nib-ls --help
-    - nib-dicomfs --help
-    - nib-nifti-dx --help
-    - nib-tck2trk --help
-    - nib-trk2tck --help
-    - nib-diff --help
     - nib-conform --help
+    - nib-convert --help
+    - nib-dicomfs --help
+    - nib-diff --help
+    - nib-ls --help
+    - nib-nifti-dx --help
     - nib-roi --help
     - nib-stats --help
+    - nib-tck2trk --help
+    - nib-trk2tck --help
+    - parrec2nii --help
 
 
 about:
