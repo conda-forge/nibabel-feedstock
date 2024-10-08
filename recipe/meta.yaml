@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "nibabel" %}
-{% set version = "5.2.1" %}
-{% set sha256 = "496389c603ad3449c867ae331b51a9eec3927ea41660ce400504980a45253576" %}
+{% set version = "5.3.0" %}
+{% set sha256 = "68a9b786e2d2dbf5b9f02dcf73b2400d54e20ffb8521591ac0e504ca283664a6" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -39,18 +39,31 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - hatchling
     - hatch-vcs
     - setuptools_scm
   run:
-    - python >=3.8
-    - packaging >=17
-    - numpy >=1.20
-    - importlib_resources >=1.3
+    - python >=3.9
+    - packaging >=20
+    - numpy >=1.22
+    - importlib_resources >=5.12
+    - typing_extensions >=4.6
 
 test:
+  requires:
+    - pytest
+    - pytest-doctestplus
+    - pytest-httpserver
+    - pytest-xdist
+    - scipy
+    - pillow
+    - h5py
+    - indexed_gzip
+    - matplotlib
+    - pydicom
+    - pyzstd
   imports:
     - nibabel
   commands:
@@ -65,6 +78,7 @@ test:
     - nib-tck2trk --help
     - nib-trk2tck --help
     - parrec2nii --help
+    - pytest --doctest-modules --doctest-plus --pyargs nibabel -n auto
 
 
 about:
