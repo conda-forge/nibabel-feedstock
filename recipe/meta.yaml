@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "nibabel" %}
-{% set version = "5.3.0" %}
-{% set sha256 = "68a9b786e2d2dbf5b9f02dcf73b2400d54e20ffb8521591ac0e504ca283664a6" %}
+{% set version = "5.3.1" %}
+{% set sha256 = "a41742b7aba96de728403c2c1a7c799bf491649f4d4014cb1dd5dd19f3d8c709" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
