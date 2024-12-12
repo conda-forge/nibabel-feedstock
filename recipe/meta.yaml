@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "nibabel" %}
 {% set version = "5.3.2" %}
-{% set sha256 = "ca7c1cc8958fc722d233b2cde446d573a8062b1ff2408dbacf4d7277eeb4d97e" %}
+{% set sha256 = "c54ad8e1875a84d95498d0db5ec47d82cdb24d388229ea63b7dcb468a3516b3f" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
@@ -53,6 +53,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     - pytest
     - pytest-doctestplus
     - pytest-httpserver
@@ -64,7 +65,6 @@ test:
     - matplotlib
     - pydicom
     - pyzstd
-    - python {{ python_min }}
   imports:
     - nibabel
   commands:
