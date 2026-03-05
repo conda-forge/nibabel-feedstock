@@ -7,8 +7,8 @@ schema_version: 1
 
 context:
   name: nibabel
-  version: 5.3.3
-  sha256: 8d2006b70d727fd0a798a88ae5fd64339741f436fcfc83d6ea3256cdbc51c5b7
+  version: 5.4.0
+  sha256: 2087118d37e2cfcca3bbdb9b60d93460aa3b0cb984962a264be4798dbf90f333
 
 package:
   name: ${{ name|lower }}
@@ -46,7 +46,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - packaging >=20
-    - numpy >=1.22
+    - numpy >=1.25
     - importlib_resources >=5.12
     - typing_extensions >=4.6
 
