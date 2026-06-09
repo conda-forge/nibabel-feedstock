@@ -7,8 +7,8 @@ schema_version: 1
 
 context:
   name: nibabel
-  version: 5.4.0
-  sha256: 2087118d37e2cfcca3bbdb9b60d93460aa3b0cb984962a264be4798dbf90f333
+  version: "5.4.2"
+  sha256: d5f4b9076a13178ae7f7acf18c8dbd503ee1c4d5c0c23b85df7be87efcbb49da
 
 package:
   name: ${{ name|lower }}
